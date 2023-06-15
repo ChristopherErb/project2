@@ -6,21 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>FailedFridge</title>
 </head>
 <body>
-    <h1>Create onHand</h1>
+    
+    <h1 class="failedTitle">The FailedFridge</h1>
+    
+<hr>
+ <h2>Add Ingredients to fridge</h2>
+<div class="addIngredient">
+   
     <form id="onHandForm">
-        <label for="name">Name:</label>
+        <label for="name">Name:</label></br>
         <input type="text" id="nameId" name="name" required><br>
 
-        <label for="quantity">Quantity:</label>
+        <label for="quantity">Quantity:</label></br>
         <input type="number" id="quantityId" name="quantity" required><br>
 
-        <label for="unit">Units:</label>
+        <label for="unit">Units:</label></br>
         <input type="text" id="unitId" name="unit" required><br>
         
         <button type="submit" id="button">Create</button>
     </form>
+</div>
+
+
+ <h2>List of current Ingredients</h2>
+<div class="listIngredients">
+   
+    <ul id="onHandList">
+
+    </ul>
+</div>
 </body>
 </html>

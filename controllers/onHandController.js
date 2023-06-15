@@ -35,6 +35,7 @@ const createOnHand = async (req, res) =>
     }
 }
 
+
 /*
 //read is done
 
@@ -71,7 +72,7 @@ const updateOnHandById = async ( req, res ) =>
         return res.status(500).json({error: `failed to update`})
     }
 }
-
+*/
 //delete
 
 const deleteOnHandById = async ( req, res) =>
@@ -95,10 +96,10 @@ const deleteOnHandById = async ( req, res) =>
     }
 }
 
-*/
+
 module.exports=
 {
-    getOnHand, createOnHand
+    getOnHand, createOnHand, deleteOnHandById
 }
 
 

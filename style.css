@@ -1,0 +1,27 @@
+.failedTitle
+{
+text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+li {
+    margin-bottom: 10px;
+  }
+
+.addIngredient
+{
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.listIngredients
+{
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+}
