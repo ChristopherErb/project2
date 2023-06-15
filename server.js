@@ -14,8 +14,6 @@ app.use(express.urlencoded({ extended: true}))
 
 
 app.get('/', (req, res) => res.json({ message: 'server works'}))
-
 app.use('/api', AppRouter)
-
 app.listen(PORT, () => console.log(`server started on port ${PORT}`))
 

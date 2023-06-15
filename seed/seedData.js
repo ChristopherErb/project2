@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Ingredient, Instruction, Recipe } = require ('../models')
+const { Ingredient, Instruction, Recipe, User, OnHand } = require ('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -137,11 +137,6 @@ const main = async () =>
         {
             recipeId: recipe1._id,
             stepNumber:6,
-            instruction: `Combine all wet ingredients with the chicken into a ziplock bag and let set for 2 hours`
-        },
-        {
-            recipeId: recipe1._id,
-            stepNumber:7,
             instruction: `Deep fry chicken until internal temperature is at least 165°F`
         },
     ]
@@ -149,6 +144,30 @@ const main = async () =>
     await Instruction.insertMany(instructions)
     console.log('we added instructions')
 
+
+        const users =
+        [
+            {
+                username: 'Christopher Erb',
+                userId: 'CErb'
+            },
+        ]
+
+    await User.insertMany(users)
+    console.log('we added users')
+
+
+
+        const onHand =
+        [
+            {
+                ingredient:`flour`,
+                quantity:`30`,
+                unit:`oz`,
+                userId: users[0].userId           
+            }
+        ]
+    await OnHand.insertMany(onHand)
 }
 
 const run = async () =>

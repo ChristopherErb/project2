@@ -19,6 +19,7 @@ const getInstructionsById = async (req, res) =>
     {
         const { id } = req.params
         const instruction = await Instruction.findById(id)
+        if(!instruction) throw Error('no instructions')
         res.json(instruction)
     } catch (e)
     {

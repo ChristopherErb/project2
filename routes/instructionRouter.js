@@ -4,7 +4,7 @@ const controller = require(`../controllers/instructionController`)
 
 
 Router.get(`/`, controller.getInstructions)
-Router.get(`//:id`, controller.getInstructionsById)
+Router.get(`/:id`, controller.getInstructionsById)
 
 
 module.exports = Router
