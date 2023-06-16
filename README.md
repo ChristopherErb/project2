@@ -32,6 +32,11 @@ The backend server provides the following API endpoints:
 
 If you have any questions or suggestions, please feel free to reach out to [me](https://github.com/ChristopherErb)
 
+## Thank you
+- Jordan Bank
+- OpenAI
+- Stack Overflow
+
 ## To-Do
 
 - Update and Delete functionality
