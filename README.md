@@ -32,6 +32,8 @@ The backend server provides the following API endpoints:
 
 If you have any questions or suggestions, please feel free to reach out to [me](https://github.com/ChristopherErb)
 
+Please feel free to visit my [Trello](https://trello.com/c/n52IS6TL/3-lets-eat) board as well.
+
 ## Thank you
 - Jordan Bank
 - OpenAI
