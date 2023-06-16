@@ -38,25 +38,24 @@ const createOnHand = async (req, res) =>
 
 //delete
 
-const deleteOnHandById = async ( req, res) =>
+// const deleteOnHandById = async ( req, res) =>
+// {
+//     try
+//     {
+//         const {_id} = req.body
+//         const deletedOnHand = await OnHand.findByIdAndRemove(_id)
+
+//         return res.json({message: `onHand deleted successfully`})
+//     } catch (e)
+//     {
+//         console.error(`failed to update OnHand`, error)
+//         return res.status(500).json({error: `failed to delete OnHand`})
+//     }
+// }
+
+ module.exports=
 {
-    try
-    {
-        const {id} = req.body
-        const deletedOnHand = await OnHand.findByIdAndRemove(id)
-
-        return res.json({message: `onHand deleted successfully`})
-    } catch (e)
-    {
-        console.error(`failed to update OnHand`, error)
-        return res.status(500).json({error: `failed to delete OnHand`})
-    }
-}
-
-
-module.exports=
-{
-    getOnHand, createOnHand, deleteOnHandById
+    getOnHand, createOnHand
 }
 
 
