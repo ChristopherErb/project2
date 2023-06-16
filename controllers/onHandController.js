@@ -36,57 +36,14 @@ const createOnHand = async (req, res) =>
 }
 
 
-/*
-//read is done
-
-//update
-
-
-const updateOnHandById = async ( req, res ) =>
-{
-    try
-    {
-        const { id } = req.params
-        const { name, quantity, unit } = req.body
-        if (!name || !quantity || !unit)
-        {
-            return res.status(400).json({error: `please provide name, uantity, and units`})
-        }
-
-        const updateOnHand = await OnHand.findByIdAndUpdate
-        (
-            id, 
-            {name, quantity, unit},
-            {new: true}
-        )
-
-        if(!updateOnHand)
-        {
-            return res.status(404).json({error: `404 ingredient nto found`})
-        }
-
-        return res.json(updateOnHand)
-    } catch (e)
-    {
-        console.error(`failed to update ingredient: `, error)
-        return res.status(500).json({error: `failed to update`})
-    }
-}
-*/
 //delete
 
 const deleteOnHandById = async ( req, res) =>
 {
     try
     {
-        const {id} = req.params
-
+        const {id} = req.body
         const deletedOnHand = await OnHand.findByIdAndRemove(id)
-
-        if(!deletedOnHand)
-        {
-            return res.status(404).json({error: `404, onHand not found`})
-        }
 
         return res.json({message: `onHand deleted successfully`})
     } catch (e)

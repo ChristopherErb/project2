@@ -27,7 +27,29 @@ button.addEventListener('click', async (event) =>
 })
 
 
+
+
+
+
 const onHandList = document.querySelector('#onHandList');
+
+
+
+
+
+
+
+// Function to delete an OnHand item
+const deleteOnHandItem = async (_id) => {
+    try {
+      await axios.delete(`http://localhost:3001/api/onHand/${_id}`)
+      fetchOnHandData(); // Refresh the list after deletion
+    } catch (error) {
+      console.log(error)
+    }
+  };
+
+
 
 // Function to fetch and display OnHand data
 const fetchOnHandData = async () => {
@@ -48,7 +70,7 @@ const fetchOnHandData = async () => {
 
       
       deleteButton.addEventListener('click', () => {
-        deleteOnHandById(item.id); // Call the deleteOnHandItem function with the item ID
+        deleteOnHandById(_id); 
       })
 
       listItem.appendChild(deleteButton)
@@ -62,15 +84,6 @@ const fetchOnHandData = async () => {
 
 
 
-// Function to delete an OnHand item
-const deleteOnHandItem = async (itemId) => {
-  try {
-    await axios.delete(`http://localhost:3001/api/onHand/${itemId}`)
-    fetchOnHandData(); // Refresh the list after deletion
-  } catch (error) {
-    console.log(error)
-  }
-};
 
 // Call the fetchOnHandData function to populate the list on page load
 fetchOnHandData()
