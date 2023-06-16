@@ -1,4 +1,4 @@
-# The Failed Fridge!
+# The Fridge!
 
 An application that allows you to add things to a digital refridgerator. 
 
